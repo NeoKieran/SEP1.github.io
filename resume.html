@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<!--
+  Résumé page styled like Raj Shinde’s: left hero pane (same as landing page),
+  right content pane with heading, download link, and embedded PDF preview.
+  Place your PDF at /assets/kerian_resume.pdf or adjust the path below.
+-->
+<html>
+  <head>
+    <title>Kerian Neo | Résumé</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      /* Make right pane white for readability */
+      #wrapper { background:#fff; }
+      .pdf-frame { width:100%; height:80vh; border: none; box-shadow:0 0 8px rgba(0,0,0,0.15); }
+      .resume-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; }
+      .resume-header h2 { margin:0; font-size:2rem; letter-spacing:2px; }
+      .resume-header a { font-size:0.9rem; }
+      @media(max-width:980px){ .pdf-frame{ height:70vh; } }
+    </style>
+  </head>
+  <body class="is-preload">
+
+    <!-- Hero pane (left) -->
+    <section id="sidebar">
+      <div class="inner">
+        <a href="#" class="image avatar"><img src="images/sam_avatar.jpg" alt="Kerian avatar" /></a>
+        <h2 style="margin-top:1rem;">Kerian Neo</h2>
+        <p style="margin-bottom:2rem;">Robotics Systems Student<br>SIT (Singapore Institute of Technology)</p>
+
+        <h3 style="margin:0;">BEng (Hons) Robotics Systems</h3>
+        <p>SIT · Expected 2026</p>
+
+        <ul class="icons" style="margin-top:2rem;">
+          <li><a href="https://github.com/your-user" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+          <li><a href="mailto:you@example.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Right content pane -->
+    <div id="wrapper">
+      <div id="main">
+        <div class="inner">
+          <div class="resume-header">
+            <h2>RESUME</h2>
+            <a href="assets/kerian_resume.pdf" download>Download</a>
+          </div>
+
+          <!-- Embedded PDF (falls back to link if browser cannot render) -->
+          <object data="assets/kerian_resume.pdf" type="application/pdf" class="pdf-frame">
+            <p>PDF preview unavailable. <a href="assets/kerian_resume.pdf">Click here to download.</a></p>
+          </object>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
