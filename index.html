@@ -1,63 +1,132 @@
 <!DOCTYPE HTML>
 <!--
-  Résumé page – same Strata split-view as the main portfolio.
-  Left sidebar identical; right panel shows a heading and embedded PDF.
+  Strata template customized for Kerian Neo's portfolio
 -->
 <html>
   <head>
-    <title>Kerian Neo | Résumé</title>
+    <title>Kerian Neo | Robotics Systems Student</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="keywords" content="Robotics, ROS1, LiteKit, SIT, SLAM, Navigation" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <!-- Override: make left-hand header background solid black -->
     <style>
       #header { background:#000 !important; }
-      /* Hide the template’s star overlay inside the header */
       #header:before { display:none !important; }
-    </style>
-    <style>
-      /* Make sure the white panel text stays dark */
-      #main { color:#000; }
-      .pdf-view { width:100%; height:80vh; border:none; box-shadow:0 0 8px rgba(0,0,0,0.15); }
-      .download-btn { font-size:0.9rem; margin-left:1rem; }
+      #one, #two, #three {
+        color: #000;
+      }
+      #two h3, #two p, #one p, #one h2, #three h2, #three p,
+      #two h2, .labeled-icons li, .labeled-icons a, .actions .button {
+        color: #000;
+      }
     </style>
   </head>
   <body class="is-preload">
 
-    <!-- Sidebar (same as portfolio) -->
-    <section id="sidebar">
+    <!-- Header -->
+    <header id="header">
       <div class="inner">
-        <a href="#" class="image avatar"><img src="images/sam_avatar.jpg" alt="Kerian avatar" /></a>
-        <h1 style="margin-top:1rem;">Kerian Neo</h1>
-        <p>Robotics Systems Student<br>Singapore Institute of Technology</p>
-        <ul class="icons">
-          <li><a href="https://github.com/your-user" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-          <li><a href="mailto:you@example.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+        <a href="#" class="image avatar"><img src="images/sam_avatar.jpg" alt="Portrait of Kerian" /></a>
+        <h1>
+          <strong>Kerian Neo</strong><br />
+          Studying Robotics Systems in SIT<br />
+          (Singapore Institute of Technology)
+        </h1>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <div id="main">
+
+      <!-- About section -->
+      <section id="one">
+        <header class="major">
+          <h2>About me</h2>
+        </header>
+        <p>
+          I am passionate about building and understanding autonomous robotic systems. My coursework and projects at the Singapore Institute of Technology focus on <strong>ROS 1</strong>, perception pipelines, and the <em>LiteKit</em> robotics framework.
+        </p>
+        <ul class="actions">
+          <li><a href="resume.html" class="button">Resume</a></li>
         </ul>
-        <footer>
-          <a href="index.html" class="button small">← Back</a>
-        </footer>
-      </div>
-    </section>
+      </section>
 
-    <!-- Main content -->
-    <div id="wrapper">
-      <div id="main">
-        <div class="inner">
-          <header class="major">
-            <h2>Resume <a href="assets/kerian_resume.pdf" class="button primary small download-btn" download>Download PDF</a></h2>
-          </header>
+      <!-- Projects gallery -->
+      <section id="two">
+        <h2>Projects</h2>
+        <div class="row">
+          <article class="col-6 col-12-xsmall work-item">
+            <a href="images/fulls/ros1_demo.gif" class="image fit thumb"><img src="images/thumbs/ros1_demo.gif" alt="ROS1 demo" /></a>
+            <h3>ROS1</h3>
+            <p>Navigation stack prototype demonstrating SLAM and path-planning.</p>
+            <a href="https://github.com/your-user/ros1-project" class="button small">GitHub</a>
+          </article>
 
-          <!-- PDF embed -->
-          <object data="assets/kerian_resume.pdf" type="application/pdf" class="pdf-view">
-            <p>Unable to display PDF. <a href="assets/kerian_resume.pdf">Download it here.</a></p>
-          </object>
+          <article class="col-6 col-12-xsmall work-item">
+            <a href="images/fulls/litekit.gif" class="image fit thumb"><img src="images/thumbs/litekit.gif" alt="LiteKit framework" /></a>
+            <h3>LiteKit</h3>
+            <p>Modular robotics toolkit for rapid prototyping on SIT coursework bots.</p>
+            <a href="https://github.com/your-user/litekit" class="button small">GitHub</a>
+          </article>
         </div>
-      </div>
+      </section>
+
+      <!-- Contact section -->
+      <section id="three">
+        <h2>Get in Touch</h2>
+        <p>Have a question or project idea? Reach out below.</p>
+        <div class="row">
+          <div class="col-8 col-12-small">
+            <form method="post" action="#">
+              <div class="row gtr-uniform gtr-50">
+                <div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
+                <div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
+                <div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+              </div>
+              <ul class="actions">
+                <li><input type="submit" value="Send Message" /></li>
+              </ul>
+            </form>
+          </div>
+          <div class="col-4 col-12-small">
+            <ul class="labeled-icons">
+              <li>
+                <h3 class="icon solid fa-home"><span class="label">Location</span></h3>
+                Singapore
+              </li>
+              <li>
+                <h3 class="icon brands fa-linkedin"><span class="label">LinkedIn</span></h3>
+                <a href="https://linkedin.com/in/your-user">linkedin.com/in/your-user</a>
+              </li>
+              <li>
+                <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+                <a href="mailto:you@example.com">you@example.com</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
     </div>
 
-    <!-- Scripts (same set as main site) -->
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="inner">
+        <ul class="icons">
+          <li><a href="https://github.com/your-user" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+          <li><a href="https://linkedin.com/in/your-user" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+          <li><a href="mailto:you@example.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; Kerian Neo</li>
+          <li>Design: <a href="https://html5up.net/strata">HTML5 UP Strata</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
