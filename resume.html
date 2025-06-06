@@ -1,30 +1,23 @@
 <!DOCTYPE HTML>
 <!--
-  Strata template customized for Kerian Neo's portfolio
+  Resume page matching the portfolio layout:
+  Left sidebar preserved, right content area intentionally left blank.
 -->
 <html>
   <head>
-    <title>Kerian Neo | Resume</title>
+    <title>Kerian Neo | Résumé</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="keywords" content="Robotics, ROS1, LiteKit, SIT, SLAM, Navigation" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-      #header { background:#000 !important; }
-      #header:before { display:none !important; }
-      #one, #two, #three {
-        color: #000;
-      }
-      #two h3, #two p, #one p, #one h2, #three h2, #three p,
-      #two h2, .labeled-icons li, .labeled-icons a, .actions .button {
-        color: #000;
-      }
+      #header { background: #000 !important; }
+      #header:before { display: none !important; }
     </style>
   </head>
   <body class="is-preload">
 
-    <!-- Header -->
-    <header id="header">
+    <!-- Sidebar (matching portfolio) -->
+    <section id="header">
       <div class="inner">
         <a href="#" class="image avatar"><img src="images/sam_avatar.jpg" alt="Portrait of Kerian" /></a>
         <h1>
@@ -32,10 +25,30 @@
           Studying Robotics Systems in SIT<br />
           (Singapore Institute of Technology)
         </h1>
+        <ul class="icons">
+          <li><a href="https://github.com/your-user" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+          <li><a href="https://linkedin.com/in/your-user" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+          <li><a href="mailto:you@example.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+        <footer>
+          <p>&copy; Kerian Neo &nbsp;|&nbsp; Design: <a href="https://html5up.net/strata">HTML5 UP Strata</a></p>
+        </footer>
       </div>
-    </header>
+    </section>
 
-    <!-- Main -->
+    <!-- Empty content wrapper -->
     <div id="main">
+      <div class="inner">
+        <!-- Right side intentionally left blank -->
+      </div>
+    </div>
 
-     
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
