@@ -21,9 +21,18 @@
       }
       .skills {
         margin-top: 1rem;
-        font-size: 0.9rem;
-        font-style: italic;
-        color: #555;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .skills span {
+        padding: 0.4em 0.8em;
+        background: #f8f8f8;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        color: #c00;
+        font-weight: 500;
       }
     </style>
   </head>
@@ -63,21 +72,19 @@
         <h2>Projects</h2>
         <div class="row">
           <article class="col-6 col-12-xsmall work-item">
-            <a href="images/fulls/LIMObot.png" class="image fit thumb"><img src="images/thumbs/LIMObot.png" alt="ROS1 demo" /></a>
+            <a href="images/fulls/LIMObot.png" class="image fit thumb"><img src="images/thumbs/LIMObot.png" alt="Autonomous Navigation Changi Airport" /></a>
             <h3>Autonomous Navigation Changi Airport</h3>
-            <p>
-              Engineered a full ROS1 navigation stack for an autonomous LIMO robot to operate in a simulated indoor environment representing Changi Airport.<br />
-              • Designed and constructed the Terminal 3 arena with high fidelity and clean workmanship, referencing real layouts for spatial accuracy.<br />
-              • Implemented SLAM using GMapping and Cartographer to dynamically build a map of the environment in real time.<br />
-              • Used Dijkstra’s algorithm for global pathfinding, ensuring the robot selected the optimal route between arena entrances and key waypoints.<br />
-              • Integrated AMCL for localisation, configured costmaps for obstacle avoidance, and used move_base for continuous path execution.<br />
-              • Implemented dynamic obstacle handling and recovery behaviours; tested extensively in real and simulated conditions.<br />
-              • Tuned LiDAR-based detection, built TF trees, and executed all configuration and deployment through Ubuntu CLI.<br />
-              • Ensured seamless robot traversal between plots and aligned arena design with aesthetic and functional goals.
-            </p>
-            <p class="skills">
-              Skills: ROS1, SLAM, AMCL, Ubuntu, CLI, move_base, GMapping, Gazebo, Cartographer, LiDAR, Indoor Navigation, Dynamic Obstacle Avoidance, Robot Localisation, Dynamic Recovery Behaviour, Linux
-            </p>
+            <p>Engineered a full ROS1 navigation stack for an autonomous LIMO robot to operate in a simulated indoor environment representing Changi Airport.<br>
+            • Designed and constructed the Terminal 3 arena with high fidelity and clean workmanship, referencing real layouts for spatial accuracy.<br>
+            • Implemented SLAM using GMapping and Cartographer to dynamically build a map of the environment in real time.<br>
+            • Used Dijkstra’s algorithm for global pathfinding, ensuring the robot selected the optimal route between arena entrances and key waypoints.<br>
+            • Integrated AMCL for localisation, configured costmaps for obstacle avoidance, and used move_base for continuous path execution.<br>
+            • Implemented dynamic obstacle handling and recovery behaviours; tested extensively in real and simulated conditions.<br>
+            • Tuned LiDAR-based detection, built TF trees, and executed all configuration and deployment through Ubuntu CLI.<br>
+            • Ensured seamless robot traversal between plots and aligned arena design with aesthetic and functional goals.</p>
+            <div class="skills">
+              <span>ROS1</span><span>SLAM</span><span>AMCL</span><span>Ubuntu</span><span>CLI</span><span>move_base</span><span>GMapping</span><span>Gazebo</span><span>Cartographer</span><span>LiDAR</span><span>Indoor Navigation</span><span>Dynamic Obstacle Avoidance</span><span>Robot Localisation</span><span>Dynamic Recovery Behaviour</span><span>Linux</span>
+            </div>
           </article>
 
           <article class="col-6 col-12-xsmall work-item">
