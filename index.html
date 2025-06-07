@@ -34,6 +34,11 @@
         color: #c00;
         font-weight: 500;
       }
+      .equal-media {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
     </style>
   </head>
   <body class="is-preload">
@@ -74,7 +79,9 @@
         <h2>Projects</h2>
         <div class="row">
           <article class="col-6 col-12-xsmall work-item">
-            <a href="images/fulls/LIMObot.png" class="image fit thumb"><img src="images/thumbs/LIMObot.png" alt="Autonomous Navigation Changi Airport" /></a>
+            <a href="images/fulls/LIMObot.png" class="image fit thumb">
+              <img src="images/thumbs/LIMObot.png" alt="Autonomous Navigation Changi Airport" class="equal-media" />
+            </a>
             <h3>Autonomous Navigation and Obstacle Construction</h3>
             <p>Built an Obstacle course and programmed a ROS based Autonomous LIMO Robot to operate in a simulated indoor environment representing the Changi Airport.<br>
             • Designed and constructed the Obstacle course with high fidelity and clean workmanship, referencing real layouts for spatial accuracy of Changi Airport Terminal 3.<br>
@@ -90,12 +97,10 @@
           </article>
 
           <article class="col-6 col-12-xsmall work-item">
-            <div class="image fit thumb">
-              <video controls muted autoplay loop style="width: 100%; height: auto; display: block;">
-                <source src="images/fulls/Litekit.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
+            <video class="image fit thumb equal-media" controls muted autoplay loop>
+              <source src="images/fulls/Litekit.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
             <h3>Litekit Robot</h3>
             <p>Implemented Litekit, a mobile robot equipped for semi-autonomous navigation and object tracking using a variety of onboard sensors and communication protocols.<br>
             • Controlled via XBee (Zigbee) wireless modules enabling reliable remote communication for telemetry and control.<br>
