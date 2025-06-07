@@ -59,7 +59,11 @@
           <h2>About me</h2>
         </header>
         <p>
-          I am passionate about building and understanding autonomous robotic systems. My coursework and projects at the Singapore Institute of Technology focus on ROS 1, perception pipelines, and the LiteKit robotics framework.
+          Team 8 is a five-engineer collective from the Singapore Institute of Technology that treats integration as a first-class discipline. Working in ROS 1 (Melodic), we stitch together LIDAR, IMU and RGB-D feeds via tf and sensor_msgs, layer tight motion loops with ros_control, and unify autonomy through the classic navigation stack (move_base + AMCL + gmapping).
+
+Our build system (catkin), runtime tooling (roslaunch, rosbag, RViz, Gazebo) and GitHub Actions CI pipeline form a continuous integration chain—from sensor drivers to cloud dashboards—so every commit is validated on real Wheeled Mobile Robots before it merges. The result: field-ready platforms that teams can operate locally or through secure remote tele-op without wrestling with mismatched nodes or flaky interfaces.
+
+In short, we don’t just develop robotic components—we integrate them into coherent systems that behave reliably in the wild, straight out of the crate.
         </p>
         <ul class="actions">
           <li><a href="resume.html" class="button" style="color: #000;">Resume</a></li>
@@ -73,13 +77,13 @@
         <div class="row">
           <article class="col-6 col-12-xsmall work-item">
             <a href="images/fulls/LIMObot.png" class="image fit thumb"><img src="images/thumbs/LIMObot.png" alt="Autonomous Navigation Changi Airport" /></a>
-            <h3>Autonomous Navigation Changi Airport</h3>
-            <p>Engineered a full ROS1 navigation stack for an autonomous LIMO robot to operate in a simulated indoor environment representing Changi Airport.<br>
-            • Designed and constructed the Terminal 3 arena with high fidelity and clean workmanship, referencing real layouts for spatial accuracy.<br>
+            <h3>Autonomous Navigation and Obstacle Construction</h3>
+            <p>Built an Obstacle course and programmed a ROS based Autonomous LIMO Robot to operate in a simulated indoor environment representing the Changi Airport.<br>
+            • Designed and constructed the Obstacle course with high fidelity and clean workmanship, referencing real layouts for spatial accuracy of Changi Airport Terminal 3.<br>
             • Implemented SLAM using GMapping and Cartographer to dynamically build a map of the environment in real time.<br>
             • Used Dijkstra’s algorithm for global pathfinding, ensuring the robot selected the optimal route between arena entrances and key waypoints.<br>
             • Integrated AMCL for localisation, configured costmaps for obstacle avoidance, and used move_base for continuous path execution.<br>
-            • Implemented dynamic obstacle handling and recovery behaviours; tested extensively in real and simulated conditions.<br>
+            • Implemented Dynamic Obstacle Handling and Recovery Behaviours; Tested extensively in real and simulated conditions.<br>
             • Tuned LiDAR-based detection, built TF trees, and executed all configuration and deployment through Ubuntu CLI.<br>
             • Ensured seamless robot traversal between plots and aligned arena design with aesthetic and functional goals.</p>
             <div class="skills">
