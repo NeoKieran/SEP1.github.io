@@ -177,7 +177,27 @@
               <span>Occupancy Grid Map</span><span>Laser Scan (/scan)</span><span>Odometry (/odom)</span><span>Pose Estimation</span><span>Map Creation</span><span>Map_server</span><span>gmapping.launch</span><span>Particle Filter (mapping)</span>
             </div>
           </article>
-        
+
+
+        <!-- ===== Project 5: AMCL ===== -->
+          <article class="col-6 col-12-xsmall work-item">
+            <a href="images/fulls/amcl.png" class="image fit thumb">
+              <img src="images/thumbs/amcl.png" alt="" class="equal-media" />
+            </a>
+            <h3>AMCL (Localization)</h3>
+            <p>
+              Configured and tuned amcl (Adaptive Monte Carlo Localization) for real-time pose estimation within static maps.<br>
+              • Integrated laser-based particle filter to maintain accurate global pose (/amcl_pose).<br>
+              • Tuned parameters:<br>
+                - odom_model_type: differential drive kinematics.<br>
+                - odom_alpha1–4: motion noise parameters.<br>
+                - min/max_particles: performance and accuracy tradeoffs.
+            </p>
+            <div class="skills">
+              <span>Particle Filter</span><span>Pose Estimation</span><span>Initial Pose (/initialpose)</span><span>Global Localization</span><span>LKaser Model (laser_z_hit, laser_z_rand, …)</span><span>Odom Model (odom_alpha1, odom_alpha2, …)</span><span>/amcl_pose</span><span>Frame IDs (map, odom, base_link)</span><span>Convergence (particles cluster tightly)</span>
+            </div>
+          </article>
+          
         
         </div>
       </section>
