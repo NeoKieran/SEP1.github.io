@@ -40,6 +40,8 @@
         object-fit: cover;
       }
     </style>
+    <!-- lightGallery CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" rel="stylesheet">
   </head>
   <body class="is-preload">
 
@@ -116,12 +118,17 @@
 
           <!-- TF2 TurtleBot Simulation -->
           <article class="col-6 col-12-xsmall work-item">
-            <a href="#tf2-gallery" class="image fit thumb equal-media popup-gallery-trigger">
-              <video class="equal-media" muted autoplay loop>
-                <source src="images/projects/tf2_intro.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+            <div id="tf2-gallery" class="image fit thumb equal-media">
+              <a href="images/projects/tf2/slide1.png" data-lg-size="1600-900" data-sub-html="TF2 Slide 1">
+                <video class="equal-media" muted autoplay loop>
+                  <source src="images/projects/tf2_intro.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
             </a>
+            <a href="images/projects/tf2/slide2.png" data-sub-html="TF2 Slide 2"></a>
+            <a href="images/projects/tf2/slide3.png" data-sub-html="TF2 Slide 3"></a>
+            <a href="images/projects/tf2/slide4.png" data-sub-html="TF2 Slide 4"></a>
+            </div>  
             <h3>TF2 TurtleBot Simulation</h3>
             <p>Built a ROS tf2 setup in turtlesim to simulate real-time leader-follower behavior using transform broadcasting.<br>
             • Used tf2 broadcaster to publish turtle1’s pose relative to the world frame.<br>
@@ -134,14 +141,8 @@
               <span>ROS1</span><span>TF2</span><span>Broadcaster</span><span>Listener</span><span>Coordinate Frames</span><span>Frame Tree</span>
             </div>
             <ul class="actions">
-              <li><a href="#tf2-gallery" class="button popup-gallery-trigger">View</a></li>
+              <li><a href="#" class="button" onclick="openTF2Gallery()">View</a></li>
             </ul>
-            <div id="tf2-gallery" class="lightbox-gallery" style="display: none;">
-              <a href="images/projects/tf2/slide1.png"><img src="images/projects/tf2/slide1.png" alt="TF2 Slide 1"></a>
-              <a href="images/projects/tf2/slide2.png"><img src="images/projects/tf2/slide2.png" alt="TF2 Slide 2"></a>
-              <a href="images/projects/tf2/slide3.png"><img src="images/projects/tf2/slide3.png" alt="TF2 Slide 3"></a>
-              <a href="images/projects/tf2/slide4.png"><img src="images/projects/tf2/slide4.png" alt="TF2 Slide 4"></a>
-            </div>
           </article>
 
           
