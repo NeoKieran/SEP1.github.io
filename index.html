@@ -114,28 +114,37 @@
             </div>
           </article>
 
-          <!-- TF2 TurtleBot project with slideshow -->
+          <!-- TF2 TurtleBot Simulation -->
           <article class="col-6 col-12-xsmall work-item">
-            <div class="tf2-gallery image fit thumb">
-              <!-- video thumbnail opens gallery -->
-              <a href="images/projects/tf2/slide1.png" class="tf2-item">
-                <video class="equal-media" autoplay muted loop playsinline><source src="images/projects/tf2_intro.mp4" type="video/mp4" /></video>
-              </a>
-              <!-- hidden slides -->
-              <a href="images/projects/tf2/slide1.png" class="tf2-item"></a>
-              <a href="images/projects/tf2/slide2.png" class="tf2-item"></a>
-              <a href="images/projects/tf2/slide3.png" class="tf2-item"></a>
-              <a href="images/projects/tf2/slide4.png" class="tf2-item"></a>
+            <a href="#tf2-gallery" class="image fit thumb equal-media popup-gallery-trigger">
+              <video class="equal-media" muted autoplay loop>
+                <source src="images/projects/tf2_intro.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </a>
+            <h3>TF2 TurtleBot Simulation</h3>
+            <p>Built a ROS tf2 setup in turtlesim to simulate real-time leader-follower behavior using transform broadcasting.<br>
+            • Used tf2 broadcaster to publish turtle1’s pose relative to the world frame.<br>
+            • Implemented listener node to control turtle2 based on real-time transform data, enabling autonomous following.<br>
+            • Verified system behavior using key ROS tools:<br>
+              – tf_echo to monitor live distance and orientation between turtles<br>
+              – view_frames to generate a static transform tree diagram<br>
+              – RViz to visually inspect spatial frame positions and orientations</p>
+            <div class="skills">
+              <span>ROS1</span><span>TF2</span><span>Broadcaster</span><span>Listener</span><span>Coordinate Frames</span><span>Frame Tree</span>
             </div>
-            <h3>TF2 TurtleBot Leader–Follower Simulation</h3>
-            <p>
-              Demonstrated <strong>tf2</strong> frame broadcasting in <code>turtlesim</code>:
-              <br>• <code>tf2_broadcaster</code> publishes <em>turtle1</em> in the <code>world</code> frame.
-              <br>• <code>tf2_listener</code> steers <em>turtle2</em> to follow in real‑time.
-              <br>• Verified transforms with <code>tf_echo</code>, <code>view_frames</code> and RViz.
-            </p>
-            <div class="skills"><span>ROS1</span><span>tf2</span><span>Broadcaster</span><span>Listener</span><span>RViz</span></div>
+            <ul class="actions">
+              <li><a href="#tf2-gallery" class="button popup-gallery-trigger">View</a></li>
+            </ul>
+            <div id="tf2-gallery" class="lightbox-gallery" style="display: none;">
+              <a href="images/projects/tf2/slide1.png"><img src="images/projects/tf2/slide1.png" alt="TF2 Slide 1"></a>
+              <a href="images/projects/tf2/slide2.png"><img src="images/projects/tf2/slide2.png" alt="TF2 Slide 2"></a>
+              <a href="images/projects/tf2/slide3.png"><img src="images/projects/tf2/slide3.png" alt="TF2 Slide 3"></a>
+              <a href="images/projects/tf2/slide4.png"><img src="images/projects/tf2/slide4.png" alt="TF2 Slide 4"></a>
+            </div>
           </article>
+
+          
         </div>
       </section>
       
