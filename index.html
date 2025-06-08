@@ -193,5 +193,25 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      $(function () {
+        $('.popup-gallery-trigger').on('click', function (e) {
+          e.preventDefault();
+          $('#tf2-gallery a').first().click();
+        });
+
+        $('#tf2-gallery').poptrox({
+          usePopupNav: true,
+          usePopupCaption: true,
+          selector: 'a',
+          fadeSpeed: 300,
+          overlayColor: '#000',
+          popupCloserText: '',
+          popupLoaderText: '',
+          popupSpeed: 300,
+          windowMargin: 50
+        });
+      });
+    </script>
   </body>
 </html>
