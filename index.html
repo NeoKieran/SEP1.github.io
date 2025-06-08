@@ -217,5 +217,26 @@
         });
       });
     </script>
+
+    <!-- lightGallery JS -->
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
+
+      <script>
+      // Initialize lightGallery on tf2-gallery div
+      const tf2Gallery = document.getElementById('tf2-gallery');
+      const tf2LightGallery = lightGallery(tf2Gallery, {
+        selector: 'a',
+        plugins: [lgZoom, lgThumbnail],
+        licenseKey: '0000-0000-000-0000', // Free use
+        speed: 500
+      });
+
+      function openTF2Gallery() {
+        tf2LightGallery.openGallery(0);
+      }
+    </script>
+
   </body>
 </html>
