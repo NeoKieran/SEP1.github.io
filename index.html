@@ -1,23 +1,17 @@
 <!DOCTYPE HTML>
-<!-- Declares the document type as HTML5 -->
+<!--
+  Strata template customized for Team 8 portfolio
+-->
 <html>
   <head>
-    <!-- Page Metadata and Styles -->
     <title>Team 8 | Robotics Systems Students</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="keywords" content="Robotics, ROS1, LiteKit, SIT, SLAM, Navigation" />
-
-    <!-- Main stylesheet link -->
     <link rel="stylesheet" href="assets/css/main.css" />
-
-    <!-- Custom inline styles for elements like header, sections, and skill tags -->
     <style>
-      /* Header customizations */
       #header { background:#000 !important; }
       #header:before { display:none !important; }
-
-      /* Text color overrides for multiple sections */
       #one, #two, #three {
         color: #000;
       }
@@ -25,16 +19,12 @@
       #two h2, .labeled-icons li, .labeled-icons a, .actions .button {
         color: #000;
       }
-
-      /* Skill tags layout */
       .skills {
         margin-top: 1rem;
         display: flex;
         flex-wrap: wrap;
         gap: 0.5rem;
       }
-
-      /* Skill tag styling */
       .skills span {
         padding: 0.4em 0.8em;
         background: #f8f8f8;
@@ -44,8 +34,6 @@
         color: #c00;
         font-weight: 500;
       }
-
-      /* Makes images and videos uniform in size */
       .equal-media {
         width: 100%;
         height: 300px;
@@ -53,10 +41,9 @@
       }
     </style>
   </head>
-
   <body class="is-preload">
 
-    <!-- HEADER SECTION: Avatar and team title -->
+    <!-- Header -->
     <header id="header">
       <div class="inner">
         <a href="#" class="image avatar"><img src="images/sam_avatar.jpg" alt="" /></a>
@@ -68,84 +55,112 @@
       </div>
     </header>
 
-    <!-- MAIN SECTION: Contains all page content -->
+    <!-- Main -->
     <div id="main">
 
-      <!-- SECTION ONE: About Me -->
+      <!-- About section -->
       <section id="one">
         <header class="major">
           <h2>About me</h2>
         </header>
         <p>
-          <!-- Description of Team 8's robotics integration work -->
+          Team 8 is a five-engineer collective from the Singapore Institute of Technology that treats integration as a first-class discipline. Working in ROS 1 (Melodic), we stitch together LIDAR, IMU and RGB-D feeds via tf and sensor_msgs, layer tight motion loops with ros_control, and unify autonomy through the classic navigation stack (move_base + AMCL + gmapping).<br>
+          Our build system (catkin), runtime tooling (roslaunch, rosbag, RViz, Gazebo) and GitHub Actions CI pipeline form a continuous integration chain—from sensor drivers to cloud dashboards—so every commit is validated on real Wheeled Mobile Robots before it merges. The result: field-ready platforms that teams can operate locally or through secure remote tele-op without wrestling with mismatched nodes or flaky interfaces.<br>
+          In short, we don’t just develop robotic components—we integrate them into coherent systems that behave reliably in the wild, straight out of the crate.<br>
         </p>
-        <!-- Resume button -->
         <ul class="actions">
           <li><a href="resume.html" class="button" style="color: #000;">Resume</a></li>
         </ul>
       </section>
 
-      <!-- SECTION TWO: Projects Gallery -->
+      <!-- Projects gallery -->
       <section id="two">
         <header class="major">
           <h2>Projects</h2>
         </header>
         <div class="row">
-
-          <!-- PROJECT 1: LIMO Robot -->
+          <!-- Project 1 -->
           <article class="col-6 col-12-xsmall work-item">
             <a href="images/fulls/LIMObot.png" class="image fit thumb">
               <img src="images/thumbs/LIMObot.png" alt="Autonomous Navigation Changi Airport" class="equal-media" />
             </a>
             <h3>Autonomous Navigation and Obstacle Construction</h3>
-            <p><!-- Description of the LIMO project --></p>
-            <!-- Tags showing technologies used -->
+            <p>Built an Obstacle course and programmed a ROS based Autonomous LIMO Robot to operate in a simulated indoor environment representing the Changi Airport.<br>
+              • Designed and constructed the Obstacle course with high fidelity and clean workmanship, referencing real layouts for spatial accuracy of Changi Airport Terminal 3.<br>
+              • Implemented SLAM using GMapping and Cartographer to dynamically build a map of the environment in real time.<br>
+              • Used Dijkstra’s algorithm for global pathfinding, ensuring the robot selected the optimal route between arena entrances and key waypoints.<br>
+              • Integrated AMCL for localisation, configured costmaps for obstacle avoidance, and used move_base for continuous path execution.<br>
+              • Implemented Dynamic Obstacle Handling and Recovery Behaviours; Tested extensively in real and simulated conditions.<br>
+              • Tuned LiDAR-based detection, built TF trees, and executed all configuration and deployment through Ubuntu CLI.<br>
+              • Ensured seamless robot traversal between plots and aligned arena design with aesthetic and functional goals.
+            </p>
             <div class="skills">
-              <span>ROS1</span><span>SLAM</span>...<span>Linux</span>
+              <span>ROS1</span><span>SLAM</span><span>AMCL</span><span>Ubuntu</span><span>CLI</span><span>move_base</span><span>GMapping</span><span>Gazebo</span><span>Cartographer</span><span>LiDAR</span><span>Indoor Navigation</span><span>Dynamic Obstacle Avoidance</span><span>Robot Localisation</span><span>Dynamic Recovery Behaviour</span><span>Linux</span>
             </div>
           </article>
 
-          <!-- PROJECT 2: Litekit Robot -->
+          <!-- Project 2 -->
           <article class="col-6 col-12-xsmall work-item">
             <video class="image fit thumb equal-media" controls muted autoplay loop>
               <source src="images/fulls/Litekit.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
             <h3>Litekit Robot</h3>
-            <p><!-- Description of Litekit Robot project --></p>
+            <p>Developed a mobile robot for semi-autonomous navigation and object tracking using sensors and communication protocols.<br>
+              • Controlled via XBee (Zigbee) wireless modules enabling reliable remote communication for telemetry and control.<br>
+              • Integrated ultrasonic and ToF (Time-of-Flight) sensors for multi-range obstacle detection.<br>
+              • Powered by the P1 microcontroller, managing real-time control logic and sensor data processing.<br>
+              • Employed PixyCam for color-based object recognition and visual tracking tasks.<br>
+              • Integrated mecanum wheels to enable omnidirectional movement for navigating tight spaces and dynamic path adjustments.<br>
+              • Designed and wired an emergency stop mechanism for user safety and controlled shutdown in critical conditions.
+            </p>
             <div class="skills">
-              <span>SPIN</span><span>Obstacle avoidance</span>...<span>Autonomous</span>
+              <span>SPIN</span><span>Obstacle avoidance</span><span>Mecanum</span><span>Embedded Systems</span><span>Object Tracking</span><span>Remote communication</span><span>C</span><span>Autonomous</span>
             </div>
           </article>
 
-          <!-- PROJECT 3: TF2 TurtleBot Simulation -->
+          <!-- Project 3 -->
           <article class="col-6 col-12-xsmall work-item">
             <video class="image fit thumb equal-media" controls muted autoplay loop>
               <source src="images/projects/tf2_intro.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <h3>TF2 TurtleBot Simulation</h3>
-            <p><!-- Description of TF2 TurtleBot project --></p>
+            <p>Built a ROS tf2 setup in turtlesim to simulate real-time leader-follower behavior using transform broadcasting.<br>
+              • Used tf2 broadcaster to publish turtle1’s pose relative to the world frame.<br>
+              • Implemented listener node to control turtle2 based on real-time transform data, enabling autonomous following.<br>
+              • Verified system behavior using key ROS tools:<br>
+              – tf_echo to monitor live distance and orientation between turtles<br>
+              – view_frames to generate a static transform tree diagram<br>
+              – RViz to visually inspect spatial frame positions and orientations
+            </p>
             <div class="skills">
-              <span>ROS1</span><span>TF2</span>...<span>Frame Tree</span>
+              <span>ROS1</span><span>TF2</span><span>Broadcaster</span><span>Listener</span><span>Coordinate Frames</span><span>Frame Tree</span>
             </div>
           </article>
-
         </div>
       </section>
 
-      <!-- SECTION THREE: Contact Info -->
+      <!-- Contact -->
       <section id="three">
         <header class="major">
           <h2>Contact</h2>
         </header>
         <div class="row">
           <div class="col-12">
-            <!-- Contact details list -->
             <ul class="labeled-icons">
-              <li><h3 class="icon solid fa-home"><span class="label">Location</span></h3>1 Punggol Coast Road, Singapore 828608</li>
-              <li><h3 class="icon solid fa-phone"><span class="label">Phone</span></h3>+65 88696083</li>
-              <li><h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>2401146@sit.singaporetech.edu.sg</li>
+              <li>
+                <h3 class="icon solid fa-home"><span class="label">Location</span></h3>
+                1 Punggol Coast Road, Singapore 828608
+              </li>
+              <li>
+                <h3 class="icon solid fa-phone"><span class="label">Phone</span></h3>
+                +65 88696083
+              </li>
+              <li>
+                <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+                2401146@sit.singaporetech.edu.sg
+              </li>
             </ul>
           </div>
         </div>
@@ -153,7 +168,7 @@
 
     </div>
 
-    <!-- FOOTER SECTION: Social Icons and Credits -->
+    <!-- Footer -->
     <footer id="footer">
       <div class="inner">
         <ul class="icons">
@@ -167,7 +182,7 @@
       </div>
     </footer>
 
-    <!-- JS FILES: Interactivity and layout behavior -->
+    <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
