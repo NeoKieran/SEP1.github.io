@@ -76,26 +76,30 @@
       <!-- Projects gallery -->
       <section id="two">
         <header class="major">
-        <h2>Projects</h2>
+          <h2>Projects</h2>
+        </header>
         <div class="row">
+          <!-- Project 1 -->
           <article class="col-6 col-12-xsmall work-item">
             <a href="images/fulls/LIMObot.png" class="image fit thumb">
               <img src="images/thumbs/LIMObot.png" alt="Autonomous Navigation Changi Airport" class="equal-media" />
             </a>
             <h3>Autonomous Navigation and Obstacle Construction</h3>
             <p>Built an Obstacle course and programmed a ROS based Autonomous LIMO Robot to operate in a simulated indoor environment representing the Changi Airport.<br>
-            • Designed and constructed the Obstacle course with high fidelity and clean workmanship, referencing real layouts for spatial accuracy of Changi Airport Terminal 3.<br>
-            • Implemented SLAM using GMapping and Cartographer to dynamically build a map of the environment in real time.<br>
-            • Used Dijkstra’s algorithm for global pathfinding, ensuring the robot selected the optimal route between arena entrances and key waypoints.<br>
-            • Integrated AMCL for localisation, configured costmaps for obstacle avoidance, and used move_base for continuous path execution.<br>
-            • Implemented Dynamic Obstacle Handling and Recovery Behaviours; Tested extensively in real and simulated conditions.<br>
-            • Tuned LiDAR-based detection, built TF trees, and executed all configuration and deployment through Ubuntu CLI.<br>
-            • Ensured seamless robot traversal between plots and aligned arena design with aesthetic and functional goals.</p>
+              • Designed and constructed the Obstacle course with high fidelity and clean workmanship, referencing real layouts for spatial accuracy of Changi Airport Terminal 3.<br>
+              • Implemented SLAM using GMapping and Cartographer to dynamically build a map of the environment in real time.<br>
+              • Used Dijkstra’s algorithm for global pathfinding, ensuring the robot selected the optimal route between arena entrances and key waypoints.<br>
+              • Integrated AMCL for localisation, configured costmaps for obstacle avoidance, and used move_base for continuous path execution.<br>
+              • Implemented Dynamic Obstacle Handling and Recovery Behaviours; Tested extensively in real and simulated conditions.<br>
+              • Tuned LiDAR-based detection, built TF trees, and executed all configuration and deployment through Ubuntu CLI.<br>
+              • Ensured seamless robot traversal between plots and aligned arena design with aesthetic and functional goals.
+            </p>
             <div class="skills">
               <span>ROS1</span><span>SLAM</span><span>AMCL</span><span>Ubuntu</span><span>CLI</span><span>move_base</span><span>GMapping</span><span>Gazebo</span><span>Cartographer</span><span>LiDAR</span><span>Indoor Navigation</span><span>Dynamic Obstacle Avoidance</span><span>Robot Localisation</span><span>Dynamic Recovery Behaviour</span><span>Linux</span>
             </div>
           </article>
 
+          <!-- Project 2 -->
           <article class="col-6 col-12-xsmall work-item">
             <video class="image fit thumb equal-media" controls muted autoplay loop>
               <source src="images/fulls/Litekit.mp4" type="video/mp4">
@@ -103,18 +107,19 @@
             </video>
             <h3>Litekit Robot</h3>
             <p>Developed a mobile robot for semi-autonomous navigation and object tracking using sensors and communication protocols.<br>
-            • Controlled via XBee (Zigbee) wireless modules enabling reliable remote communication for telemetry and control.<br>
-            • Integrated ultrasonic and ToF (Time-of-Flight) sensors for multi-range obstacle detection.<br>
-            • Powered by the P1 microcontroller, managing real-time control logic and sensor data processing.<br>
-            • Employed PixyCam for color-based object recognition and visual tracking tasks.<br>
-            • Integrated mecanum wheels to enable omnidirectional movement for navigating tight spaces and dynamic path adjustments.<br>
-            • Designed and wired an emergency stop mechanism for user safety and controlled shutdown in critical conditions.</p>
+              • Controlled via XBee (Zigbee) wireless modules enabling reliable remote communication for telemetry and control.<br>
+              • Integrated ultrasonic and ToF (Time-of-Flight) sensors for multi-range obstacle detection.<br>
+              • Powered by the P1 microcontroller, managing real-time control logic and sensor data processing.<br>
+              • Employed PixyCam for color-based object recognition and visual tracking tasks.<br>
+              • Integrated mecanum wheels to enable omnidirectional movement for navigating tight spaces and dynamic path adjustments.<br>
+              • Designed and wired an emergency stop mechanism for user safety and controlled shutdown in critical conditions.
+            </p>
             <div class="skills">
-              <span>SPIN</span><span>Obstacle avoidance</span><span>Mecanum </span><span>Embedded Systems</span><span>Object Tracking</span><span>Remote communication</span><span>C</span><span>Autonomous</span>
+              <span>SPIN</span><span>Obstacle avoidance</span><span>Mecanum</span><span>Embedded Systems</span><span>Object Tracking</span><span>Remote communication</span><span>C</span><span>Autonomous</span>
             </div>
           </article>
 
-          <!-- TF2 TurtleBot Simulation -->
+          <!-- Project 3 -->
           <article class="col-6 col-12-xsmall work-item">
             <video class="image fit thumb equal-media" controls muted autoplay loop>
               <source src="images/projects/tf2_intro.mp4" type="video/mp4" />
@@ -122,22 +127,21 @@
             </video>
             <h3>TF2 TurtleBot Simulation</h3>
             <p>Built a ROS tf2 setup in turtlesim to simulate real-time leader-follower behavior using transform broadcasting.<br>
-            • Used tf2 broadcaster to publish turtle1’s pose relative to the world frame.<br>
-            • Implemented listener node to control turtle2 based on real-time transform data, enabling autonomous following.<br>
-            • Verified system behavior using key ROS tools:<br>
+              • Used tf2 broadcaster to publish turtle1’s pose relative to the world frame.<br>
+              • Implemented listener node to control turtle2 based on real-time transform data, enabling autonomous following.<br>
+              • Verified system behavior using key ROS tools:<br>
               – tf_echo to monitor live distance and orientation between turtles<br>
               – view_frames to generate a static transform tree diagram<br>
-              – RViz to visually inspect spatial frame positions and orientations</p>
+              – RViz to visually inspect spatial frame positions and orientations
+            </p>
             <div class="skills">
               <span>ROS1</span><span>TF2</span><span>Broadcaster</span><span>Listener</span><span>Coordinate Frames</span><span>Frame Tree</span>
             </div>
           </article>
-
-          
         </div>
       </section>
-      
-      <!-- Contact section -->
+
+      <!-- Contact -->
       <section id="three">
         <header class="major">
           <h2>Contact</h2>
@@ -180,30 +184,9 @@
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.poptrox.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-      $(function () {
-        $('.popup-gallery-trigger').on('click', function (e) {
-          e.preventDefault();
-          $('#tf2-gallery a').first().click();
-        });
-
-        $('#tf2-gallery').poptrox({
-          usePopupNav: true,
-          usePopupCaption: true,
-          selector: 'a',
-          fadeSpeed: 300,
-          overlayColor: '#000',
-          popupCloserText: '',
-          popupLoaderText: '',
-          popupSpeed: 300,
-          windowMargin: 50
-        });
-      });
-    </script>
   </body>
 </html>
