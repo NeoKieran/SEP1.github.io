@@ -40,8 +40,6 @@
         object-fit: cover;
       }
     </style>
-    <!-- lightGallery CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" rel="stylesheet">
   </head>
   <body class="is-preload">
 
@@ -118,17 +116,10 @@
 
           <!-- TF2 TurtleBot Simulation -->
           <article class="col-6 col-12-xsmall work-item">
-            <div id="tf2-gallery" class="image fit thumb equal-media">
-              <a href="images/projects/tf2/slide1.png" data-lg-size="1600-900" data-sub-html="TF2 Slide 1">
-                <video class="equal-media" muted autoplay loop>
-                  <source src="images/projects/tf2_intro.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-            </a>
-            <a href="images/projects/tf2/slide2.png" data-sub-html="TF2 Slide 2"></a>
-            <a href="images/projects/tf2/slide3.png" data-sub-html="TF2 Slide 3"></a>
-            <a href="images/projects/tf2/slide4.png" data-sub-html="TF2 Slide 4"></a>
-            </div>  
+            <video class="image fit thumb equal-media" controls muted autoplay loop>
+              <source src="images/projects/tf2_intro.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
             <h3>TF2 TurtleBot Simulation</h3>
             <p>Built a ROS tf2 setup in turtlesim to simulate real-time leader-follower behavior using transform broadcasting.<br>
             • Used tf2 broadcaster to publish turtle1’s pose relative to the world frame.<br>
@@ -140,9 +131,6 @@
             <div class="skills">
               <span>ROS1</span><span>TF2</span><span>Broadcaster</span><span>Listener</span><span>Coordinate Frames</span><span>Frame Tree</span>
             </div>
-            <ul class="actions">
-              <li><a href="#" class="button" onclick="openTF2Gallery()">View</a></li>
-            </ul>
           </article>
 
           
@@ -217,26 +205,5 @@
         });
       });
     </script>
-
-    <!-- lightGallery JS -->
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.umd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
-
-      <script>
-      // Initialize lightGallery on tf2-gallery div
-      const tf2Gallery = document.getElementById('tf2-gallery');
-      const tf2LightGallery = lightGallery(tf2Gallery, {
-        selector: 'a',
-        plugins: [lgZoom, lgThumbnail],
-        licenseKey: '0000-0000-000-0000', // Free use
-        speed: 500
-      });
-
-      function openTF2Gallery() {
-        tf2LightGallery.openGallery(0);
-      }
-    </script>
-
   </body>
 </html>
