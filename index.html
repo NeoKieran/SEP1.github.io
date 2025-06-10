@@ -105,10 +105,13 @@
 
       <section id="two">
         <header class="major">
-          <h2>Why ROS</h2>
+          <h2>Why ROS?</h2>
         </header>
         <p>
-          -----CONTENT-----
+          • De-facto robotics middleware: publish/subscribe nodes, standard .msg contracts<br>
+          • 26 k+ open-source packages & drivers for rapid prototyping<br>
+          • rviz / rosbag / Gazebo tool-chain slashes debug & sim time<br>
+          • Cross-platform C++ & Python APIs → easy hand-off to ROS 2 for real-time production
         </p>
       </section>
       
@@ -120,27 +123,32 @@
         </header>
         <div class="row">
 
-
-          <!-- ===== Project 3: TF2 Simulation ===== -->
+          <!-- ===== Project 9: ROS1 Gazebo and RViz Integration===== -->
           <article class="col-6 col-12-xsmall work-item">
-            <video class="image fit thumb equal-media" controls muted autoplay loop>
-              <source src="images/projects/tf2_intro.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <h3>TF2 TurtleBot Simulation</h3>
+            <div style="display: flex; gap: 10px;">
+              <a href="images/fulls/gazebo1.png" style="flex: 1;">
+                <img src="images/thumbs/gazebo1.png" alt="Gazebo Image 1" class="equal-media" />
+              </a>
+              <a href="images/fulls/gazebo2.png" style="flex: 1;">
+                <img src="images/thumbs/gazebo2.png" alt="Gazebo Image 2" class="equal-media" />
+              </a>
+            </div>
+            <h3>ROS1 Gazebo and RViz Integration</h3>
             <p>
-              Built a ROS tf2 setup in turtlesim to simulate leader-follower behavior.<br>
-              • Used broadcaster to publish turtle1’s transform.<br>
-              • Implemented listener to control turtle2.<br>
-              • Verified system behavior using key ROS tools:<br>
-                – tf_echo to monitor live distance and orientation between turtles<br>
-                – view_frames to generate a static transform tree diagram<br>
-                – RViz to visually inspect spatial frame positions and orientations
+              Developed a simulated robotics environment using ROS1, Gazebo, and RViz for testing perception and control algorithms.<br>
+              • Configured Gazebo to simulate a robot model with realistic physics and sensor data ( LIDAR, IMU, camera).<br>
+              • Integrated Gazebo plugins to publish sensor and joint state data to ROS topics.<br>
+              • Launched robot controllers and navigation stack in ROS for motion planning and control.<br>
+              • Used RViz to visualize the robot model, sensor data, and coordinate frames in real-time.<br>
+                – Displayed laser scans, 3D environment, and odometry data for debugging perception pipelines<br>
+                – Monitored TF tree to verify sensor alignment and transform consistency<br>
+                – Used interactive markers for sending navigation goals and observing robot response
             </p>
             <div class="skills">
-              <span>ROS1</span><span>TF2</span><span>Broadcaster</span><span>Listener</span><span>Coordinate Frames</span><span>Leader-follower</span><span>Real-time control</span><span>Python</span><span>Transform tree</span>
+              <span>Gazebo Simulator</span><span>Physics-based simulation</span><span>Sensor simulation (LIDAR, IMU, camera)</span><span>Robot model (URDF / SDF)</span><span>ROS-Gazebo integration</span><span>Gazebo plugins (sensor/actuator plugins)</span><span>Environment modeling</span><span>Simulated robot control</span><span>ROS Control / Controller Manager</span><span>Simulation of autonomous navigation</span>
             </div>
           </article>
+
 
           <!-- ===== Project 4: Gmapping ===== -->
           <article class="col-6 col-12-xsmall work-item">
@@ -232,32 +240,28 @@
             </div>
           </article>
 
-          
-         <!-- ===== Project 9: ROS1 Gazebo and RViz Integration===== -->
+
+          <!-- ===== Project 3: TF2 Simulation ===== -->
           <article class="col-6 col-12-xsmall work-item">
-            <div style="display: flex; gap: 10px;">
-              <a href="images/fulls/gazebo1.png" style="flex: 1;">
-                <img src="images/thumbs/gazebo1.png" alt="Gazebo Image 1" class="equal-media" />
-              </a>
-              <a href="images/fulls/gazebo2.png" style="flex: 1;">
-                <img src="images/thumbs/gazebo2.png" alt="Gazebo Image 2" class="equal-media" />
-              </a>
-            </div>
-            <h3>ROS1 Gazebo and RViz Integration</h3>
+            <video class="image fit thumb equal-media" controls muted autoplay loop>
+              <source src="images/projects/tf2_intro.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <h3>TF2 TurtleBot Simulation</h3>
             <p>
-              Developed a simulated robotics environment using ROS1, Gazebo, and RViz for testing perception and control algorithms.<br>
-              • Configured Gazebo to simulate a robot model with realistic physics and sensor data ( LIDAR, IMU, camera).<br>
-              • Integrated Gazebo plugins to publish sensor and joint state data to ROS topics.<br>
-              • Launched robot controllers and navigation stack in ROS for motion planning and control.<br>
-              • Used RViz to visualize the robot model, sensor data, and coordinate frames in real-time.<br>
-                – Displayed laser scans, 3D environment, and odometry data for debugging perception pipelines<br>
-                – Monitored TF tree to verify sensor alignment and transform consistency<br>
-                – Used interactive markers for sending navigation goals and observing robot response
+              Built a ROS tf2 setup in turtlesim to simulate leader-follower behavior.<br>
+              • Used broadcaster to publish turtle1’s transform.<br>
+              • Implemented listener to control turtle2.<br>
+              • Verified system behavior using key ROS tools:<br>
+                – tf_echo to monitor live distance and orientation between turtles<br>
+                – view_frames to generate a static transform tree diagram<br>
+                – RViz to visually inspect spatial frame positions and orientations
             </p>
             <div class="skills">
-              <span>Gazebo Simulator</span><span>Physics-based simulation</span><span>Sensor simulation (LIDAR, IMU, camera)</span><span>Robot model (URDF / SDF)</span><span>ROS-Gazebo integration</span><span>Gazebo plugins (sensor/actuator plugins)</span><span>Environment modeling</span><span>Simulated robot control</span><span>ROS Control / Controller Manager</span><span>Simulation of autonomous navigation</span>
+              <span>ROS1</span><span>TF2</span><span>Broadcaster</span><span>Listener</span><span>Coordinate Frames</span><span>Leader-follower</span><span>Real-time control</span><span>Python</span><span>Transform tree</span>
             </div>
           </article>
+
 
 
         </div>
