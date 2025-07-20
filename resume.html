@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-  Resume layout with Strata split view:
-  Left: avatar, name, contact (as per portfolio)
-  Right: RESUME heading, download button, and embedded PDF preview
--->
 <html>
   <head>
     <title>Kieran Neo Portfolio</title>
@@ -11,27 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-#header{
-  background: #666 !important;   /* use any grey you prefer, e.g. #777 or #888 */
-}
-      #main > .inner{
-  max-width: 100%;   /* cancel Strata’s 65 em cap          */
-  padding: 0;        /* optional – remove side gutters     */
-}
+      /* Grey background for sidebar */
+      #header {
+        background: #666 !important;
+      }
 
-/* ====== stretch the embedded PDF ====== */
-.pdf-view{
-  width: 100%;                       /* fill the column   */
-  height: calc(100vh - 4rem);        /* ~full viewport, adjust gap if needed */
-  border: none;
-  box-shadow: 0 0 8px rgba(0,0,0,.15);/* keep the subtle frame */
-  display: block;                    /* remove inline gaps */
-}
+      /* Remove dark overlay from Strata */
+      #header:before {
+        display: none !important;
+      }
+
+      /* Stretch right-hand content container */
+      #main {
+        width: calc(100% - 25rem); /* matches left sidebar width */
+        margin-left: 25rem;
+      }
+
+      /* Fill PDF in the right side */
+      .pdf-view {
+        width: 100%;
+        height: 100vh;
+        border: none;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+        display: block;
+      }
+
+      /* Optional: Remove max-width limit from inner */
+      #main > .inner {
+        max-width: 100%;
+        padding: 0;
+      }
     </style>
   </head>
-  <body class="is-preload">
 
-    <!-- Header -->
+  <body class="is-preload">
+    <!-- Header (Left Sidebar) -->
     <header id="header">
       <div class="inner">
         <a href="#" class="image avatar"><img src="images/Photo.jpg" alt="" /></a>
@@ -43,36 +52,33 @@
       </div>
     </header>
 
-    <!-- Main content -->
+    <!-- Main content (Right Side) -->
     <div id="main">
       <div class="inner">
-       
-
-<iframe class="pdf-view" src="documents/kieran_resume.pdf"></iframe>
-        
+        <iframe class="pdf-view" src="documents/kieran_resume.pdf"></iframe>
       </div>
     </div>
 
-    <!-- ================= FOOTER ================= -->
+    <!-- Footer -->
     <footer id="footer">
-        <div class="row">
-          <div class="col-12">
-            <ul class="labeled-icons">
-              <li>
-                <h3 class="icon solid fa-phone"><span class="label">Phone</span></h3>
-                +65 86936720
-              </li>
-              <li>
-                <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-                2401711@sit.singaporetech.edu.sg
-              </li>
-            </ul>
-          </div>
+      <div class="row">
+        <div class="col-12">
+          <ul class="labeled-icons">
+            <li>
+              <h3 class="icon solid fa-phone"><span class="label">Phone</span></h3>
+              +65 86936720
+            </li>
+            <li>
+              <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+              2401711@sit.singaporetech.edu.sg
+            </li>
+          </ul>
         </div>
-        <ul class="copyright">
-          <li>&copy; Team 8</li>
-          <li>Design: <a href="https://html5up.net/strata">HTML5 UP Strata</a></li>
-        </ul>
+      </div>
+      <ul class="copyright">
+        <li>&copy; Team 8</li>
+        <li>Design: <a href="https://html5up.net/strata">HTML5 UP Strata</a></li>
+      </ul>
     </footer>
 
     <!-- Scripts -->
