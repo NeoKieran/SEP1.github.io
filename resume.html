@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-      /* Disable page scroll; only iframe scrolls */
+      /* Prevent page scroll; only the PDF iframe scrolls */
       html, body {
         margin: 0;
         padding: 0;
@@ -16,29 +16,22 @@
 
       /* Sidebar */
       #header {
-        background: #666 !important;
-        height: 100vh;
-        width: 25rem;
         position: fixed;
         top: 0;
         left: 0;
+        width: 25rem;
+        height: 100vh;
+        background: #666 !important;
         overflow: hidden;
       }
       #header:before {
         display: none !important;
       }
-
-      /* Sidebar content alignment */
       #header .inner {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-start;
         padding-top: 2rem;
-      }
-      #header .labeled-icons {
-        margin-top: auto;
-        padding-bottom: 2rem;
       }
 
       /* Main PDF panel */
@@ -46,7 +39,7 @@
         position: absolute;
         top: 0;
         bottom: 0;
-        left: 25rem;
+        left: 25rem;   /* leave room for sidebar */
         right: 0;
         display: flex;
         align-items: center;
@@ -55,41 +48,53 @@
       #main > .inner {
         width: 100%;
         height: 100%;
+        padding: 0;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0;
       }
 
       /* PDF viewer styling */
       .pdf-view {
-        width: 75%;        /* adjust for desired white‐space margin */
-        height: 90vh;      /* leave a little space top/bottom */
+        width: 75%;      /* adjust to get desired center margin */
+        height: 90vh;    /* leaves a bit of vertical padding */
         border: none;
-        box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 0 8px rgba(0,0,0,0.15);
         overflow: auto;
-        display: block;
       }
 
-      /* Footer (matches index.html) */
+      /* Footer (contacts) matches index.html alignment */
       #footer {
         position: fixed;
         bottom: 0;
         left: 0;
         width: 25rem;
         background: #666;
-        padding-top: 1rem;
+        padding: 1rem 0;
       }
       #footer .labeled-icons,
-      #footer .copyright {
-        color: #fff;
+      #footer .labeled-icons li,
+      #footer .labeled-icons li h3,
+      #footer .labeled-icons a {
+        color: #fff !important;
+      }
+      #footer .labeled-icons { list-style: none; margin: 0; padding: 0; }
+      #footer .labeled-icons li {
+        display: flex;
+        align-items: center;
+        margin: 0.5rem 0;
       }
       #footer .labeled-icons li h3 {
-        color: #fff;
+        margin: 0;
+        margin-right: 0.5rem;
+      }
+      #footer .labeled-icons a {
+        text-decoration: none;
       }
     </style>
   </head>
   <body class="is-preload">
+
     <!-- Sidebar -->
     <header id="header">
       <div class="inner">
@@ -99,53 +104,54 @@
           Studying Robotics Systems in SIT<br />
           (Singapore Institute of Technology)
         </h1>
-        <ul class="labeled-icons">
-          <li>
-            <h3 class="icon brands fa-linkedin"><span class="label">LinkedIn</span></h3>
-            <a href="https://www.linkedin.com/in/kieranneo/" target="_blank">linkedin.com/in/kieranneo</a>
-          </li>
-          <li>
-            <h3 class="icon solid fa-phone"><span class="label">Phone</span></h3>
-            +65&nbsp;8693&nbsp;6720
-          </li>
-          <li>
-            <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-            <a href="mailto:2401711@sit.singaporetech.edu.sg">2401711@sit.singaporetech.edu.sg</a>
-          </li>
-        </ul>
       </div>
     </header>
 
     <!-- Main PDF Area -->
     <div id="main">
       <div class="inner">
-        <iframe class="pdf-view" src="documents/kieran_resume.pdf"></iframe>
+        <iframe
+          class="pdf-view"
+          src="documents/kieran_resume.pdf"
+        ></iframe>
       </div>
     </div>
 
-    <!-- Footer -->
+    <!-- Footer (contact icons) -->
     <footer id="footer">
       <div class="row">
         <div class="col-12">
           <ul class="labeled-icons">
+            <!-- LinkedIn -->
             <li>
               <h3 class="icon brands fa-linkedin"><span class="label">LinkedIn</span></h3>
-              <a href="https://www.linkedin.com/in/kieranneo/" target="_blank">linkedin.com/in/kieranneo</a>
+              <a
+                href="https://www.linkedin.com/in/kieranneo/"
+                target="_blank"
+                >linkedin.com/in/kieranneo</a
+              >
             </li>
+            <!-- Phone -->
             <li>
               <h3 class="icon solid fa-phone"><span class="label">Phone</span></h3>
               +65&nbsp;8693&nbsp;6720
             </li>
+            <!-- Email -->
             <li>
               <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-              <a href="mailto:2401711@sit.singaporetech.edu.sg">2401711@sit.singaporetech.edu.sg</a>
+              <a href="mailto:2401711@sit.singaporetech.edu.sg"
+                >2401711@sit.singaporetech.edu.sg</a
+              >
             </li>
           </ul>
         </div>
       </div>
       <ul class="copyright">
         <li>&copy; Kieran Neo</li>
-        <li>Design: <a href="https://html5up.net/strata" target="_blank">HTML5 UP Strata</a></li>
+        <li>
+          Design:
+          <a href="https://html5up.net/strata" target="_blank">HTML5 UP Strata</a>
+        </li>
       </ul>
     </footer>
 
