@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-      /* Disable page scroll */
+      /* Disable page scroll; only iframe scrolls */
       html, body {
         margin: 0;
         padding: 0;
@@ -20,50 +20,76 @@
         height: 100vh;
         width: 25rem;
         position: fixed;
-        left: 0;
         top: 0;
+        left: 0;
         overflow: hidden;
       }
-
       #header:before {
         display: none !important;
       }
 
-      /* Right-hand content panel */
+      /* Sidebar content alignment */
+      #header .inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 2rem;
+      }
+      #header .labeled-icons {
+        margin-top: auto;
+        padding-bottom: 2rem;
+      }
+
+      /* Main PDF panel */
       #main {
-        margin-left: 25rem; /* space for sidebar */
-        height: 100vh;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 25rem;
+        right: 0;
         display: flex;
         align-items: center;
         justify-content: center;
       }
-
       #main > .inner {
         width: 100%;
-        padding: 0;
+        height: 100%;
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
+        padding: 0;
       }
 
-      /* PDF settings */
+      /* PDF viewer styling */
       .pdf-view {
-        height: 90vh;           /* gives room top and bottom */
-        width: 75%;             /* adjust to your taste */
+        width: 75%;        /* adjust for desired white‐space margin */
+        height: 90vh;      /* leave a little space top/bottom */
         border: none;
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
         overflow: auto;
+        display: block;
       }
 
-      /* Hide footer if not needed */
+      /* Footer (matches index.html) */
       #footer {
-        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 25rem;
+        background: #666;
+        padding-top: 1rem;
+      }
+      #footer .labeled-icons,
+      #footer .copyright {
+        color: #fff;
+      }
+      #footer .labeled-icons li h3 {
+        color: #fff;
       }
     </style>
   </head>
-
   <body class="is-preload">
-
     <!-- Sidebar -->
     <header id="header">
       <div class="inner">
@@ -75,12 +101,16 @@
         </h1>
         <ul class="labeled-icons">
           <li>
+            <h3 class="icon brands fa-linkedin"><span class="label">LinkedIn</span></h3>
+            <a href="https://www.linkedin.com/in/kieranneo/" target="_blank">linkedin.com/in/kieranneo</a>
+          </li>
+          <li>
             <h3 class="icon solid fa-phone"><span class="label">Phone</span></h3>
-            +65 86936720
+            +65&nbsp;8693&nbsp;6720
           </li>
           <li>
             <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-            2401711@sit.singaporetech.edu.sg
+            <a href="mailto:2401711@sit.singaporetech.edu.sg">2401711@sit.singaporetech.edu.sg</a>
           </li>
         </ul>
       </div>
@@ -92,6 +122,32 @@
         <iframe class="pdf-view" src="documents/kieran_resume.pdf"></iframe>
       </div>
     </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="row">
+        <div class="col-12">
+          <ul class="labeled-icons">
+            <li>
+              <h3 class="icon brands fa-linkedin"><span class="label">LinkedIn</span></h3>
+              <a href="https://www.linkedin.com/in/kieranneo/" target="_blank">linkedin.com/in/kieranneo</a>
+            </li>
+            <li>
+              <h3 class="icon solid fa-phone"><span class="label">Phone</span></h3>
+              +65&nbsp;8693&nbsp;6720
+            </li>
+            <li>
+              <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+              <a href="mailto:2401711@sit.singaporetech.edu.sg">2401711@sit.singaporetech.edu.sg</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <ul class="copyright">
+        <li>&copy; Kieran Neo</li>
+        <li>Design: <a href="https://html5up.net/strata" target="_blank">HTML5 UP Strata</a></li>
+      </ul>
+    </footer>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
