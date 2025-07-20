@@ -14,6 +14,19 @@
 #header{
   background: #666 !important;   /* use any grey you prefer, e.g. #777 or #888 */
 }
+      #main > .inner{
+  max-width: 100%;   /* cancel Strata’s 65 em cap          */
+  padding: 0;        /* optional – remove side gutters     */
+}
+
+/* ====== stretch the embedded PDF ====== */
+.pdf-view{
+  width: 100%;                       /* fill the column   */
+  height: calc(100vh - 4rem);        /* ~full viewport, adjust gap if needed */
+  border: none;
+  box-shadow: 0 0 8px rgba(0,0,0,.15);/* keep the subtle frame */
+  display: block;                    /* remove inline gaps */
+}
     </style>
   </head>
   <body class="is-preload">
