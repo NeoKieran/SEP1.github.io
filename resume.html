@@ -6,41 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-      /* Grey background for sidebar */
+      /* Sidebar background */
       #header {
         background: #666 !important;
       }
 
-      /* Remove dark overlay from Strata */
+      /* Remove overlay */
       #header:before {
         display: none !important;
       }
 
-      /* Stretch right-hand content container */
+      /* Shift main content to the right */
       #main {
-        width: calc(100% - 25rem); /* matches left sidebar width */
-        margin-left: 25rem;
+        position: absolute;
+        left: 25rem; /* same as sidebar width */
+        right: 0;
+        width: auto;
       }
 
-      /* Fill PDF in the right side */
-      .pdf-view {
-        width: 100%;
-        height: 100vh;
-        border: none;
-        box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
-        display: block;
-      }
-
-      /* Optional: Remove max-width limit from inner */
+      /* Remove max-width from inner */
       #main > .inner {
         max-width: 100%;
         padding: 0;
+      }
+
+      /* Align PDF flush to the left of main area */
+      .pdf-view {
+        width: 85%; /* Adjust width here: 85% looks close to 3/4 */
+        height: 100vh;
+        margin-left: auto; /* push it toward the right */
+        display: block;
+        border: none;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
       }
     </style>
   </head>
 
   <body class="is-preload">
-    <!-- Header (Left Sidebar) -->
+
+    <!-- Header (Sidebar) -->
     <header id="header">
       <div class="inner">
         <a href="#" class="image avatar"><img src="images/Photo.jpg" alt="" /></a>
@@ -52,7 +56,7 @@
       </div>
     </header>
 
-    <!-- Main content (Right Side) -->
+    <!-- Main content (PDF) -->
     <div id="main">
       <div class="inner">
         <iframe class="pdf-view" src="documents/kieran_resume.pdf"></iframe>
