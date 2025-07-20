@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>Kieran Neo Portfolio</title>
+    <title>Kieran Neo Résumé</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-      /* Prevent page scroll; only the PDF iframe scrolls */
+      /* Disable page scroll; only PDF scrolls */
       html, body {
         margin: 0;
         padding: 0;
@@ -14,36 +14,60 @@
         height: 100vh;
       }
 
-      /* Sidebar */
+      /* Sidebar (left) */
       #header {
+        background: #666 !important;
         position: fixed;
         top: 0;
         left: 0;
         width: 25rem;
         height: 100vh;
-        background: #666 !important;
         overflow: hidden;
       }
-      #header:before {
-        display: none !important;
-      }
+      #header:before { display: none !important; }
+
+      /* Sidebar inner alignment */
       #header .inner {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 2rem;
+        padding: 2rem 1rem;
+      }
+      #header .inner h1 {
+        text-align: center;
+        color: #fff;
+      }
+      #header .labeled-icons {
+        list-style: none;
+        padding: 0;
+        margin-top: auto;
+      }
+      #header .labeled-icons li {
+        display: flex;
+        align-items: center;
+        margin: 0.5rem 0;
+        color: #fff;
+      }
+      #header .labeled-icons li h3 {
+        margin: 0 0.5rem 0 0;
+        color: #fff;
+      }
+      #header .labeled-icons a {
+        color: #fff;
+        text-decoration: none;
       }
 
-      /* Main PDF panel */
+      /* Main PDF panel (right) */
       #main {
         position: absolute;
         top: 0;
-        bottom: 0;
-        left: 25rem;   /* leave room for sidebar */
+        left: 25rem;
         right: 0;
+        bottom: 0;
         display: flex;
         align-items: center;
         justify-content: center;
+        background: #fff;
       }
       #main > .inner {
         width: 100%;
@@ -53,57 +77,86 @@
         align-items: center;
         justify-content: center;
       }
-
-      /* PDF viewer styling */
       .pdf-view {
-        width: 75%;      /* adjust to get desired center margin */
-        height: 90vh;    /* leaves a bit of vertical padding */
+        width: 75%;
+        height: 90vh;
         border: none;
         box-shadow: 0 0 8px rgba(0,0,0,0.15);
         overflow: auto;
       }
 
-      /* Footer (contacts) matches index.html alignment */
+      /* Footer (reuse Index.html alignment) */
       #footer {
         position: fixed;
         bottom: 0;
         left: 0;
         width: 25rem;
         background: #666;
-        padding: 1rem 0;
+        padding: 1rem 1rem 0;
       }
-      #footer .labeled-icons,
-      #footer .labeled-icons li,
-      #footer .labeled-icons li h3,
-      #footer .labeled-icons a {
-        color: #fff !important;
+      #footer .labeled-icons {
+        list-style: none;
+        padding: 0;
+        margin: 0;
       }
-      #footer .labeled-icons { list-style: none; margin: 0; padding: 0; }
       #footer .labeled-icons li {
         display: flex;
         align-items: center;
         margin: 0.5rem 0;
       }
       #footer .labeled-icons li h3 {
-        margin: 0;
-        margin-right: 0.5rem;
+        margin: 0 0.5rem 0 0;
+        color: #fff;
       }
       #footer .labeled-icons a {
+        color: #fff;
+        text-decoration: none;
+      }
+      #footer .labeled-icons li,
+      #footer .labeled-icons li h3 {
+        color: #fff;
+      }
+      #footer .copyright {
+        color: #fff;
+        font-size: 0.75rem;
+        margin-top: 0.5rem;
+      }
+      #footer .copyright a {
+        color: #fff;
         text-decoration: none;
       }
     </style>
   </head>
   <body class="is-preload">
-
     <!-- Sidebar -->
     <header id="header">
       <div class="inner">
-        <a href="#" class="image avatar"><img src="images/Photo.jpg" alt="" /></a>
+        <a href="#" class="image avatar">
+          <img src="images/Photo.jpg" alt="Kieran Neo" />
+        </a>
         <h1>
           <strong>Kieran Neo</strong><br />
           Studying Robotics Systems in SIT<br />
           (Singapore Institute of Technology)
         </h1>
+        <ul class="labeled-icons">
+          <li>
+            <h3 class="icon brands fa-linkedin"><span class="label">LinkedIn</span></h3>
+            <a href="https://www.linkedin.com/in/kieranneo/" target="_blank">
+              linkedin.com/in/kieranneo
+            </a>
+          </li>
+          <li>
+            <h3 class="icon solid fa-phone"><span class="label">Phone</span></h3>
+            +65 8693 6720
+          </li>
+          <li>
+            <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+            <a href="mailto:2401711@sit.singaporetech.edu.sg">
+              2401711@sit.singaporetech.edu.sg
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
 
@@ -117,42 +170,30 @@
       </div>
     </div>
 
-    <!-- Footer (contact icons) -->
+    <!-- Footer (contacts) -->
     <footer id="footer">
-      <div class="row">
-        <div class="col-12">
-          <ul class="labeled-icons">
-            <!-- LinkedIn -->
-            <li>
-              <h3 class="icon brands fa-linkedin"><span class="label">LinkedIn</span></h3>
-              <a
-                href="https://www.linkedin.com/in/kieranneo/"
-                target="_blank"
-                >linkedin.com/in/kieranneo</a
-              >
-            </li>
-            <!-- Phone -->
-            <li>
-              <h3 class="icon solid fa-phone"><span class="label">Phone</span></h3>
-              +65&nbsp;8693&nbsp;6720
-            </li>
-            <!-- Email -->
-            <li>
-              <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-              <a href="mailto:2401711@sit.singaporetech.edu.sg"
-                >2401711@sit.singaporetech.edu.sg</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-      <ul class="copyright">
-        <li>&copy; Kieran Neo</li>
+      <ul class="labeled-icons">
         <li>
-          Design:
-          <a href="https://html5up.net/strata" target="_blank">HTML5 UP Strata</a>
+          <h3 class="icon brands fa-linkedin"><span class="label">LinkedIn</span></h3>
+          <a href="https://www.linkedin.com/in/kieranneo/" target="_blank">
+            linkedin.com/in/kieranneo
+          </a>
+        </li>
+        <li>
+          <h3 class="icon solid fa-phone"><span class="label">Phone</span></h3>
+          +65 8693 6720
+        </li>
+        <li>
+          <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+          <a href="mailto:2401711@sit.singaporetech.edu.sg">
+            2401711@sit.singaporetech.edu.sg
+          </a>
         </li>
       </ul>
+      <div class="copyright">
+        &copy; Kieran Neo&nbsp;&nbsp;|&nbsp;&nbsp;
+        Design: <a href="https://html5up.net/strata" target="_blank">HTML5 UP Strata</a>
+      </div>
     </footer>
 
     <!-- Scripts -->
