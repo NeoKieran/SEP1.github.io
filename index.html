@@ -17,8 +17,18 @@
     <!-- Custom Styles for Header, Section Text, Skills Tags, Media -->
     <style>
       /* Header background override */
-#header { background: url("images/Robot.jpg") no-repeat center / cover !important; }
+#header{
+  /* Path is relative to this HTML file */
+  background: url("images/Robot.jpg")          /* show Robot.jpg   */
+              no-repeat                        /* don’t tile       */
+              left center / contain !important;/* fit & anchor     */
 
+  /* Make sure the column always spans the full viewport height */
+  min-height: 100vh;
+}
+
+/* Keep Strata’s dark overlay from obscuring the picture */
+#header:before{ display:none !important; }
       /* Remove header background image overlay */
       #header:before { display:none !important; }
 
