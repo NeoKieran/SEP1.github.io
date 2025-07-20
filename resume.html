@@ -6,45 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-      /* Sidebar background */
-      #header {
-        background: #666 !important;
+      /* Disable page scroll */
+      html, body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        height: 100vh;
       }
 
-      /* Remove overlay */
+      /* Sidebar */
+      #header {
+        background: #666 !important;
+        height: 100vh;
+        width: 25rem;
+        position: fixed;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+      }
+
       #header:before {
         display: none !important;
       }
 
-      /* Shift main content to the right */
+      /* Right-hand content panel */
       #main {
-        position: absolute;
-        left: 25rem; /* same as sidebar width */
-        right: 0;
-        width: auto;
-      }
-
-      /* Remove max-width from inner */
-      #main > .inner {
-        max-width: 100%;
-        padding: 0;
-      }
-
-      /* Align PDF flush to the left of main area */
-      .pdf-view {
-        width: 85%; /* Adjust width here: 85% looks close to 3/4 */
+        margin-left: 25rem; /* space for sidebar */
         height: 100vh;
-        margin-left: auto; /* push it toward the right */
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #main > .inner {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* PDF settings */
+      .pdf-view {
+        height: 90vh;           /* gives room top and bottom */
+        width: 75%;             /* adjust to your taste */
         border: none;
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+        overflow: auto;
+      }
+
+      /* Hide footer if not needed */
+      #footer {
+        display: none;
       }
     </style>
   </head>
 
   <body class="is-preload">
 
-    <!-- Header (Sidebar) -->
+    <!-- Sidebar -->
     <header id="header">
       <div class="inner">
         <a href="#" class="image avatar"><img src="images/Photo.jpg" alt="" /></a>
@@ -53,37 +73,25 @@
           Studying Robotics Systems in SIT<br />
           (Singapore Institute of Technology)
         </h1>
+        <ul class="labeled-icons">
+          <li>
+            <h3 class="icon solid fa-phone"><span class="label">Phone</span></h3>
+            +65 86936720
+          </li>
+          <li>
+            <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+            2401711@sit.singaporetech.edu.sg
+          </li>
+        </ul>
       </div>
     </header>
 
-    <!-- Main content (PDF) -->
+    <!-- Main PDF Area -->
     <div id="main">
       <div class="inner">
         <iframe class="pdf-view" src="documents/kieran_resume.pdf"></iframe>
       </div>
     </div>
-
-    <!-- Footer -->
-    <footer id="footer">
-      <div class="row">
-        <div class="col-12">
-          <ul class="labeled-icons">
-            <li>
-              <h3 class="icon solid fa-phone"><span class="label">Phone</span></h3>
-              +65 86936720
-            </li>
-            <li>
-              <h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-              2401711@sit.singaporetech.edu.sg
-            </li>
-          </ul>
-        </div>
-      </div>
-      <ul class="copyright">
-        <li>&copy; Team 8</li>
-        <li>Design: <a href="https://html5up.net/strata">HTML5 UP Strata</a></li>
-      </ul>
-    </footer>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
